@@ -1,0 +1,11 @@
+- name: Test Play
+  hosts: localhost
+  connection: local
+  vars:
+    with_messaging: no
+  tasks:
+  - name: Template a file
+    ansible.builtin.template:
+      src: ./foo.j2
+      dest: ./foo.txt
+      
