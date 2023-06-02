@@ -1,5 +1,9 @@
 This is always here!
 
-{% if with_messaging|bool %}
+{% if with_messaging | bool %}
  => Conditional Text <=
+{% endif %}
+
+{% if external_id | default('none') != 'none' %}
+=> EXTERNAL ID <=
 {% endif %}
